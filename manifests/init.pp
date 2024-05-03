@@ -195,7 +195,7 @@ class apt (
 
   if $update['frequency'] {
     assert_type(
-      Variant[Enum['always','hourly','daily','weekly','reluctantly'],Integer[60]],
+      Variant[Enum['always','hourly','daily','weekly','reluctantly'],Integer[60],Deferred],
       $update['frequency'],
     )
   }
